@@ -1,0 +1,4 @@
+Sources for Mini Quadruped - optimized for 9G servos
+
+Mini Quadruped (http://www.thingiverse.com/thing:31314)
+AT-AS quadruped (or hexapod) robot (http://www.thingiverse.com/thing:30088)
