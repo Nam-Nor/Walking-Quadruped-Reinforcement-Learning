@@ -1,6 +1,7 @@
 # FIXED
 
 main.obj: ../main.c
+main.obj: ../header.h
 main.obj: C:/Users/Namkha/workspace_v7/RL\ Quadruped/driverlib/MSP432P4xx/driverlib.h
 main.obj: C:/Users/Namkha/workspace_v7/RL\ Quadruped/driverlib/MSP432P4xx/adc14.h
 main.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/stdint.h
@@ -47,8 +48,11 @@ main.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/stdarg.h
 main.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/string.h
 main.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/math.h
 main.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/_defs.h
+main.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/time.h
+main.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/abi_prefix.h
 
 ../main.c: 
+../header.h: 
 C:/Users/Namkha/workspace_v7/RL\ Quadruped/driverlib/MSP432P4xx/driverlib.h: 
 C:/Users/Namkha/workspace_v7/RL\ Quadruped/driverlib/MSP432P4xx/adc14.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/stdint.h: 
@@ -95,3 +99,5 @@ C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/stdarg.h:
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/string.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/math.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/_defs.h: 
+C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/time.h: 
+C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/abi_prefix.h: 

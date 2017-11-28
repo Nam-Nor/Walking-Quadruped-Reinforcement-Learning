@@ -39,12 +39,6 @@ ORDERED_OBJS += \
 "./driverlib/MSP432P4xx/timer_a.obj" \
 "./driverlib/MSP432P4xx/uart.obj" \
 "./driverlib/MSP432P4xx/wdt_a.obj" \
-"./fann/fann.obj" \
-"./fann/fann_cascade.obj" \
-"./fann/fann_error.obj" \
-"./fann/fann_io.obj" \
-"./fann/fann_train.obj" \
-"./fann/fann_train_data.obj" \
 "../msp432p401r.cmd" \
 $(GEN_CMDS__FLAG) \
 -llibc.a \
@@ -58,10 +52,8 @@ RMDIR := RMDIR /S/Q
 -include sources.mk
 -include subdir_vars.mk
 -include driverlib/MSP432P4xx/subdir_vars.mk
--include fann/subdir_vars.mk
 -include subdir_rules.mk
 -include driverlib/MSP432P4xx/subdir_rules.mk
--include fann/subdir_rules.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
@@ -191,9 +183,8 @@ RL\ Quadruped.hex: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "main.obj" "startup_msp432p401r_ccs.obj" "system_msp432p401r.obj" "driverlib\MSP432P4xx\adc14.obj" "driverlib\MSP432P4xx\aes256.obj" "driverlib\MSP432P4xx\comp_e.obj" "driverlib\MSP432P4xx\cpu.obj" "driverlib\MSP432P4xx\crc32.obj" "driverlib\MSP432P4xx\cs.obj" "driverlib\MSP432P4xx\dma.obj" "driverlib\MSP432P4xx\flash.obj" "driverlib\MSP432P4xx\fpu.obj" "driverlib\MSP432P4xx\gpio.obj" "driverlib\MSP432P4xx\i2c.obj" "driverlib\MSP432P4xx\interrupt.obj" "driverlib\MSP432P4xx\mpu.obj" "driverlib\MSP432P4xx\pcm.obj" "driverlib\MSP432P4xx\pmap.obj" "driverlib\MSP432P4xx\pss.obj" "driverlib\MSP432P4xx\ref_a.obj" "driverlib\MSP432P4xx\reset.obj" "driverlib\MSP432P4xx\rtc_c.obj" "driverlib\MSP432P4xx\spi.obj" "driverlib\MSP432P4xx\sysctl.obj" "driverlib\MSP432P4xx\systick.obj" "driverlib\MSP432P4xx\timer32.obj" "driverlib\MSP432P4xx\timer_a.obj" "driverlib\MSP432P4xx\uart.obj" "driverlib\MSP432P4xx\wdt_a.obj" "fann\fann.obj" "fann\fann_cascade.obj" "fann\fann_error.obj" "fann\fann_io.obj" "fann\fann_train.obj" 
-	-$(RM) "fann\fann_train_data.obj" 
-	-$(RM) "main.d" "startup_msp432p401r_ccs.d" "system_msp432p401r.d" "driverlib\MSP432P4xx\adc14.d" "driverlib\MSP432P4xx\aes256.d" "driverlib\MSP432P4xx\comp_e.d" "driverlib\MSP432P4xx\cpu.d" "driverlib\MSP432P4xx\crc32.d" "driverlib\MSP432P4xx\cs.d" "driverlib\MSP432P4xx\dma.d" "driverlib\MSP432P4xx\flash.d" "driverlib\MSP432P4xx\fpu.d" "driverlib\MSP432P4xx\gpio.d" "driverlib\MSP432P4xx\i2c.d" "driverlib\MSP432P4xx\interrupt.d" "driverlib\MSP432P4xx\mpu.d" "driverlib\MSP432P4xx\pcm.d" "driverlib\MSP432P4xx\pmap.d" "driverlib\MSP432P4xx\pss.d" "driverlib\MSP432P4xx\ref_a.d" "driverlib\MSP432P4xx\reset.d" "driverlib\MSP432P4xx\rtc_c.d" "driverlib\MSP432P4xx\spi.d" "driverlib\MSP432P4xx\sysctl.d" "driverlib\MSP432P4xx\systick.d" "driverlib\MSP432P4xx\timer32.d" "driverlib\MSP432P4xx\timer_a.d" "driverlib\MSP432P4xx\uart.d" "driverlib\MSP432P4xx\wdt_a.d" "fann\fann.d" "fann\fann_cascade.d" "fann\fann_error.d" "fann\fann_io.d" "fann\fann_train.d" "fann\fann_train_data.d" 
+	-$(RM) "main.obj" "startup_msp432p401r_ccs.obj" "system_msp432p401r.obj" "driverlib\MSP432P4xx\adc14.obj" "driverlib\MSP432P4xx\aes256.obj" "driverlib\MSP432P4xx\comp_e.obj" "driverlib\MSP432P4xx\cpu.obj" "driverlib\MSP432P4xx\crc32.obj" "driverlib\MSP432P4xx\cs.obj" "driverlib\MSP432P4xx\dma.obj" "driverlib\MSP432P4xx\flash.obj" "driverlib\MSP432P4xx\fpu.obj" "driverlib\MSP432P4xx\gpio.obj" "driverlib\MSP432P4xx\i2c.obj" "driverlib\MSP432P4xx\interrupt.obj" "driverlib\MSP432P4xx\mpu.obj" "driverlib\MSP432P4xx\pcm.obj" "driverlib\MSP432P4xx\pmap.obj" "driverlib\MSP432P4xx\pss.obj" "driverlib\MSP432P4xx\ref_a.obj" "driverlib\MSP432P4xx\reset.obj" "driverlib\MSP432P4xx\rtc_c.obj" "driverlib\MSP432P4xx\spi.obj" "driverlib\MSP432P4xx\sysctl.obj" "driverlib\MSP432P4xx\systick.obj" "driverlib\MSP432P4xx\timer32.obj" "driverlib\MSP432P4xx\timer_a.obj" "driverlib\MSP432P4xx\uart.obj" "driverlib\MSP432P4xx\wdt_a.obj" 
+	-$(RM) "main.d" "startup_msp432p401r_ccs.d" "system_msp432p401r.d" "driverlib\MSP432P4xx\adc14.d" "driverlib\MSP432P4xx\aes256.d" "driverlib\MSP432P4xx\comp_e.d" "driverlib\MSP432P4xx\cpu.d" "driverlib\MSP432P4xx\crc32.d" "driverlib\MSP432P4xx\cs.d" "driverlib\MSP432P4xx\dma.d" "driverlib\MSP432P4xx\flash.d" "driverlib\MSP432P4xx\fpu.d" "driverlib\MSP432P4xx\gpio.d" "driverlib\MSP432P4xx\i2c.d" "driverlib\MSP432P4xx\interrupt.d" "driverlib\MSP432P4xx\mpu.d" "driverlib\MSP432P4xx\pcm.d" "driverlib\MSP432P4xx\pmap.d" "driverlib\MSP432P4xx\pss.d" "driverlib\MSP432P4xx\ref_a.d" "driverlib\MSP432P4xx\reset.d" "driverlib\MSP432P4xx\rtc_c.d" "driverlib\MSP432P4xx\spi.d" "driverlib\MSP432P4xx\sysctl.d" "driverlib\MSP432P4xx\systick.d" "driverlib\MSP432P4xx\timer32.d" "driverlib\MSP432P4xx\timer_a.d" "driverlib\MSP432P4xx\uart.d" "driverlib\MSP432P4xx\wdt_a.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

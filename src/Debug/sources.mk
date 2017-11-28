@@ -113,5 +113,4 @@ PDE_DEPS__QUOTED :=
 SUBDIRS := \
 . \
 driverlib/MSP432P4xx \
-fann \
 
